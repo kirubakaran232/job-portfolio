@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Jobs - Job Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        .navbar-brand img {
+            width: 154px;
+            height: 34px;
+            margin-top: 15px;
+        }
+        
+        .navbar-brand {
+            margin-right: 30px;
+        }
+        
+        .navbar-nav .btn+.btn {
+            margin-left: 10px;
+        }
+        
+        .nav-item a::hover {
+            color: rgb(0, 0, 0);
+        }
+        
+        .jobs-section {
+            padding: 60px 0;
+        }
+        
+        .job-listing {
+            margin-bottom: 30px;
+        }
+        
+        .footer {
+            background-color: #F0F8FF;
+            padding: 20px 0;
+        }
+        
+        .footer-logo {
+            max-width: 100px;
+        }
+        
+        .footer-text {
+            margin-top: 10px;
+        }
+        
+        .footer-links a {
+            color: #6c757d;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F0F8FF;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F0F8FF;">
+        <a class="navbar-brand" href="#">
+            <img src="../imgs/logo.svg" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logintemplates.html">Templates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="jobs.html">Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About us</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <!-- Profile Dropdown -->
+                <li class="nav-item dropdown ml-2">
+                    <a class="nav-link" href="./saved.html" id="profile" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle" style="font-size: 2.0em;"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr style="margin-top: 2px;">
+    <!-- Jobs Section -->
+    <section class="jobs-section">
+        <div class="container">
+            <h2 class="text-center">Find Jobs</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <!-- Search Bar -->
+                    <form id="searchForm" class="form-inline mb-4">
+                        <input class="form-control mr-sm-2" type="text" id="searchQuery" name="searchQuery" placeholder="Search Jobs" required>
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <h2 class="text-center">Post Jobs</h2>
+                    <!-- Job Posting Form -->
+                    <form id="jobForm" class="form-inline mb-4">
+                        <input class="form-control mr-sm-2" type="text" id="jobName" name="jobName" placeholder="Job Name" required>
+                        <input class="form-control mr-sm-2" type="text" id="companyName" name="companyName" placeholder="Company Name" required>
+                        <input class="form-control mr-sm-2" type="text" id="location" name="location" placeholder="Location" required>
+                        <input class="form-control mr-sm-2" type="email" id="mail" name="mail" placeholder="Email" required>
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Post Job</button>
+                    </form>
+                    <div id="jobsContainer"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr style="margin-top: 2px;">
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="../imgs/logo.svg" alt="Logo" class="footer-logo mb-2">
+                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu erat lacus.</p>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="templates.html">Templates</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Notifications</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Subscribe</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <hr>
+    <p class="text-center">All rights are reversed</p>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS for job form handling and job listing -->
+    <script>
+        document.getElementById('jobForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const jobName = document.getElementById('jobName').value;
+            const companyName = document.getElementById('companyName').value;
+            const location = document.getElementById('location').value;
+            const mail = document.getElementById('mail').value;
+
+            const response = await fetch('/api/jobs', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    jobName,
+                    companyName,
+                    location,
+                    mail
+                })
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                alert('Job posted successfully');
+                loadJobs();
+            } else {
+                alert('Error posting job: ' + result.error);
+            }
+        });
+
+        async function loadJobs() {
+            const response = await fetch('/api/jobs');
+            const jobs = await response.json();
+
+            const jobsContainer = document.getElementById('jobsContainer');
+            jobsContainer.innerHTML = '';
+            jobs.forEach(job => {
+                const jobElement = document.createElement('div');
+                jobElement.classList.add('job-listing', 'p-3', 'mb-3', 'bg-light');
+                jobElement.innerHTML = `
+                    <h4>${job.jobName}</h4>
+                    <p>${job.companyName}</p>
+                    <p>Location: ${job.location}</p>
+                    <a href="mailto:${job.mail}" class="btn btn-primary">Apply Now</a>
+                `;
+                jobsContainer.appendChild(jobElement);
+            });
+        }
+
+        window.onload = loadJobs;
+    </script>
+</body>
+
+</html>

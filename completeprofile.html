@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Profile</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        
+        .login-card .form-control {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F0F8FF;">
+    <div class="login-card" style="background-color: #CBDAE6;">
+        <h3 class="text-center mb-4">Complete your profile</h3>
+        <form id="login-form">
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="education" placeholder="Education" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="degree" placeholder="Degree" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="experience" placeholder="Experience" required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" id="address" placeholder="Residential Address" rows="2" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="url" class="form-control" id="githubLink" placeholder="GitHub Link" required>
+            </div>
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="privacyPolicy" required>
+                <label class="form-check-label" for="privacyPolicy">I agree to the privacy policy</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        <div id="error-message" class="mt-3 text-danger" style="display: none;"></div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const education = document.getElementById('education').value;
+            const degree = document.getElementById('degree').value;
+            const experience = document.getElementById('experience').value;
+            const address = document.getElementById('address').value;
+            const githubLink = document.getElementById('githubLink').value;
+            const errorMessage = document.getElementById('error-message');
+
+            const token = localStorage.getItem('token');
+
+            if (!token) {
+                errorMessage.textContent = 'No token found. Please log in again.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:5000/api/profile', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({
+                        email,
+                        education,
+                        degree,
+                        experience,
+                        address,
+                        githubLink
+                    })
+                });
+
+                if (response.ok) {
+                    window.location.href = `/profile.html?email=${encodeURIComponent(email)}`;
+                } else {
+                    const errorData = await response.json();
+                    errorMessage.textContent = errorData.message || 'An unexpected error occurred';
+                    errorMessage.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                errorMessage.textContent = 'An error occurred. Please try again.';
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

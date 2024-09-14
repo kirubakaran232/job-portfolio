@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobPersonal Portfolios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .navbar-brand img {
+            width: 154px;
+            height: 34px;
+            margin-top: 15px;
+        }
+        
+        .navbar-brand {
+            margin-right: 30px;
+        }
+        
+        .navbar-nav .btn+.btn {
+            margin-left: 10px;
+        }
+        
+        .nav-item a::hover {
+            color: rgb(0, 0, 0);
+        }
+        
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .card {
+            margin-bottom: 20px;
+            border-radius: 0;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .footer {
+            background-color: #F0F8FF;
+            padding: 20px 0;
+        }
+        
+        .footer-logo {
+            max-width: 100px;
+        }
+        
+        .footer-text {
+            margin-top: 10px;
+        }
+        
+        .footer-links a {
+            color: #6c757d;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f0f8ff;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F0F8FF;">
+        <a class="navbar-brand" href="#">
+            <img src="../imgs/logo.svg" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logintemplates.html">Templates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="jobs.html">Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About us</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <!-- Profile Dropdown -->
+                <li class="nav-item dropdown ml-2">
+                    <a class="nav-link" href="./saved.html" id=" profile " aria-haspopup="true " aria-expanded="false ">
+                        <i class="fas fa-user-circle" style="font-size: 2.0em; "></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr style="margin-top: 2px;">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="../imgs/iPortfolio-.webp" class="card-img-top" alt="Placeholder Image">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="card-buttons">
+                            <a href="../demo/iPortfolio/index.html" rel="nofollow" target="_blank" class="btn btn-primary">Live Demo</a>
+                            <a href="../zips/iPortfolio.zip" download class="btn btn-secondary">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="../imgs/Kelly.webp" class="card-img-top" alt="Placeholder Image">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="card-buttons">
+                            <a href="../demo/Kelly/index.html" rel="nofollow" target="_blank" class="btn btn-primary">Live Demo</a>
+                            <a href="../zips/Kelly.zip" download class="btn btn-secondary">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more cards here -->
+                <div class="card">
+                    <div class="image-container">
+                        <img src="../imgs/Laura-.webp" class="card-img-top" alt="Placeholder Image">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="card-buttons">
+                            <a href="../demo/Laura/index.html" rel="nofollow" target="_blank" class="btn btn-primary">Live Demo</a>
+                            <a href="../zips/Laura.zip" download class="btn btn-secondary">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="../imgs/MyResume.webp" class="card-img-top" alt="Placeholder Image">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="card-buttons">
+                            <a href="../demo/MyResume/index.html" rel="nofollow" target="_blank" class="btn btn-primary">Live Demo</a>
+                            <a href="../zips/MyResume.zip" download class="btn btn-secondary">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more cards here -->
+                <div class="card">
+                    <div class="image-container">
+                        <img src="../imgs/Personal.webp" class="card-img-top" alt="Placeholder Image">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="card-buttons">
+                            <a href="../demo/Personal/index.html" rel="nofollow" target="_blank" class="btn btn-primary">Live Demo</a>
+                            <a href="../zips/Personal.zip" download class="btn btn-secondary">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="../imgs/PhotoFolio.webp" class="card-img-top" alt="Placeholder Image">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="card-buttons">
+                            <a href="../demo/PhotoFolio/index.html" rel="nofollow" target="_blank" class="btn btn-primary">Live Demo</a>
+                            <a href="../zips/PhotoFolio.zip" download class="btn btn-secondary">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more cards here -->
+            </div>
+        </div>
+    </div>
+    <hr>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="./imgs/logo.svg" alt="Logo" class="footer-logo mb-2">
+                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu erat lacus.</p>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Notification</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Notifications</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Subscribe</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <hr>
+    <p class="text-center">All rights are reversed</p>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
